@@ -1,5 +1,5 @@
 FROM scratch
 MAINTAINER zhengwei.wang <zhengwei.wang@hotmail.com>
 
-ADD http://images.linuxcontainers.org/images/debian/bookworm/amd64/default/20241119_05:24/rootfs.tar.xz /
+ADD http://images.linuxcontainers.org/images/debian/bullseye/amd64/default/20241119_05:24/rootfs.tar.xz /
 CMD ["bash"]
