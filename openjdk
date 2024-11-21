@@ -1,4 +1,4 @@
-FROM registry.cn-beijing.aliyuncs.com/daydream/debian:bookworm
+FROM registry.cn-beijing.aliyuncs.com/pluspromaxultra/debian:bookworm
 MAINTAINER zhengwei.wang <zhengwei.wang@hotmail.com>
 
 RUN apt-get -y update \
