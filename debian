@@ -1,0 +1,10 @@
+FROM docker.io/library/debian:bookworm
+MAINTAINER zhengwei.wang <zhengwei.wang@hotmail.com>
+
+RUN apt-get -y update && apt-get -y install locales apt-transport-https ca-certificates \
+    && rm -rf /var/lib/apt/lists/* \
+    && sed -i "s@http://deb.debian.org@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list \
+    && sed -i "s@http://security.debian.org@https://mirrors.tuna.tsinghua.edu.cn@g" /etc/apt/sources.list \
+    && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
+    && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
